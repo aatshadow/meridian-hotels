@@ -1,0 +1,185 @@
+@import "tailwindcss";
+
+/* ============================================================
+   MERIDIAN — Design Tokens
+   "The Horizon" — maritime luxury for a Black Sea hotel studio
+   ============================================================ */
+@theme {
+  /* Surfaces — pearl & Black Sea */
+  --color-pearl: #faf7f1;
+  --color-pearl-deep: #f3ede1;
+  --color-ivory: #ffffff;
+  --color-sand: #efe7d6;
+  --color-hairline: #e6decb;
+
+  /* Sea blues */
+  --color-sea-deep: #0e2f3d;
+  --color-sea-night: #081f29;
+  --color-sea: #1c5066;
+  --color-sea-mist: #7fa8b8;
+  --color-sea-fog: #c3d6dd;
+
+  /* Bulgarian gold */
+  --color-gold: #c8a24e;
+  --color-gold-soft: #d9be84;
+  --color-gold-light: #ead49a;
+  --color-gold-deep: #9a7426;
+
+  /* Ink */
+  --color-ink: #16323d;
+  --color-ink-soft: #4a5f68;
+
+  /* Type */
+  --font-display: "Fraunces", Georgia, serif;
+  --font-sans: "Inter Tight", system-ui, -apple-system, sans-serif;
+  --font-mono: "Space Mono", ui-monospace, monospace;
+
+  /* Motion */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-quint: cubic-bezier(0.83, 0, 0.17, 1);
+}
+
+:root {
+  --gold-gradient: linear-gradient(110deg, #ead49a 0%, #c8a24e 45%, #9a7426 100%);
+  --shadow-soft: 0 24px 60px -28px rgba(14, 47, 61, 0.28);
+  --shadow-lift: 0 40px 90px -40px rgba(14, 47, 61, 0.45);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-hairline);
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: auto; /* Lenis handles smooth scroll */
+  }
+
+  body {
+    background-color: var(--color-pearl);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    overflow-x: hidden;
+    font-feature-settings: "ss01", "cv01";
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 0.98;
+    color: var(--color-sea-deep);
+  }
+
+  ::selection {
+    background: var(--color-gold);
+    color: #fff;
+  }
+
+  /* Focus visibility — quality floor */
+  :focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* Custom cursor: hide native on fine pointers */
+  @media (hover: hover) and (pointer: fine) {
+    body { cursor: none; }
+    a, button { cursor: none; }
+  }
+
+  /* Slim scrollbar */
+  ::-webkit-scrollbar { width: 9px; }
+  ::-webkit-scrollbar-track { background: var(--color-pearl-deep); }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-sea-mist);
+    border-radius: 99px;
+    border: 2px solid var(--color-pearl-deep);
+  }
+  ::-webkit-scrollbar-thumb:hover { background: var(--color-sea); }
+}
+
+/* ============================================================
+   Signature utilities
+   ============================================================ */
+@layer utilities {
+  /* Metallic gold text */
+  .text-gold-foil {
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .bg-gold-foil {
+    background: var(--gold-gradient);
+  }
+
+  /* Eyebrow / tide-mark label */
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+
+  /* Mono data label */
+  .data-label {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.04em;
+  }
+
+  /* Film grain overlay — applied to atmospheric sections */
+  .grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.04;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* Soft vignette for hero imagery */
+  .vignette::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(120% 120% at 50% 30%, transparent 40%, rgba(8, 31, 41, 0.55) 100%);
+  }
+
+  .edge-fade-b {
+    -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  }
+
+  /* Hanging hairline used as the horizon motif */
+  .hairline {
+    background: var(--color-hairline);
+  }
+
+  .balance { text-wrap: balance; }
+  .pretty { text-wrap: pretty; }
+}
+
+/* Reduced motion — respect the user */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  body { cursor: auto !important; }
+}

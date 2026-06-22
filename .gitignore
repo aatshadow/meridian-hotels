@@ -1,0 +1,18 @@
+# dependencies
+node_modules/
+
+# build output (root combined + per-app)
+dist/
+
+# logs / os / editor
+*.log
+npm-debug.log*
+.DS_Store
+*.local
+
+# vercel
+.vercel/
+
+# misc
+.cache/
+.vite/

@@ -1,0 +1,13 @@
+{
+  "name": "meridian-hotels",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Meridian Hotels — premium hotel websites served under /meridian, /chaika and /calypso.",
+  "scripts": {
+    "build": "node build-all.mjs",
+    "dev:meridian": "npm --prefix meridian-site run dev",
+    "dev:chaika": "npm --prefix chaika-site run dev",
+    "dev:calypso": "npm --prefix calypso-site run dev"
+  }
+}
