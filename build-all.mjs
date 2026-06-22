@@ -11,6 +11,7 @@ const APPS = [
   { dir: "meridian-site", name: "meridian", base: "/meridian/" },
   { dir: "chaika-site", name: "chaika", base: "/chaika/" },
   { dir: "calypso-site", name: "calypso", base: "/calypso/" },
+  { dir: "oman-site", name: "oman", base: "/oman/" },
 ];
 
 const run = (cmd, cwd, env = {}) =>
@@ -74,9 +75,10 @@ function LANDING() {
   <div class="head">
     <span class="kicker">Black Sea · Bulgaria</span>
     <h1>Premium hotel <em>websites</em></h1>
-    <p class="sub">A portfolio of three sites — one agency, two hotels — built to a world-class standard. Pick a property.</p>
+    <p class="sub">A portfolio of four sites — one agency, three hotels — built to a world-class standard. Pick a property.</p>
   </div>
   <div class="grid">
+    ${card("/oman/", "Hotel Oman", "Primorsko", "Imperial seafront hotel", "#9f8c5f")}
     ${card("/calypso/", "Calypso Blue", "Primorsko", "Seafront hotel · pool · restaurant", "#ff7a64")}
     ${card("/chaika/", "Chaika", "Primorsko", "Boutique seafront hotel", "#c8a24e")}
     ${card("/meridian/", "Meridian", "Agency", "Hotel growth studio", "#3e8fa0")}

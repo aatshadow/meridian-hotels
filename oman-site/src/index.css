@@ -1,0 +1,192 @@
+@import "tailwindcss";
+
+/* ============================================================
+   ХОТЕЛ ОМАН · ПРИМОРСКО — Design Tokens
+   Imperial elegance, drawn from the hotel's own crest:
+   antique gold (#9f8c5f) on midnight navy (#04142b).
+   Token NAMES kept compatible with the shared kit; values are Oman's.
+   "cream" = warm pearl · "gold" = antique gold · "sea" = soft gold.
+   ============================================================ */
+@theme {
+  /* Pearl / light surfaces (used sparingly) */
+  --color-cream: #f4efe4;
+  --color-cream-deep: #e8dfc9;
+  --color-ivory: #fbf8f0;
+  --color-sand: #dccfae;
+  --color-line: #233052;
+
+  /* Midnight navy — the imperial field */
+  --color-navy: #04142b;
+  --color-navy-deep: #02030e;
+  --color-navy-soft: #12223f;
+
+  /* Soft gold (repurposed "sea" — secondary / hairlines / pale gold) */
+  --color-sea: #c3b083;
+  --color-sea-deep: #7e6e45;
+  --color-sea-mist: #d8c9a0;
+  --color-sea-pale: #e9dec2;
+
+  /* Antique gold — the signature accent */
+  --color-gold: #9f8c5f;
+  --color-gold-soft: #b9a878;
+  --color-gold-light: #d8c9a0;
+  --color-gold-deep: #7e6e45;
+
+  /* Ink (on pearl) */
+  --color-ink: #1b2236;
+  --color-ink-soft: #6b6452;
+
+  /* Type */
+  --font-display: "Prata", "Times New Roman", serif;
+  --font-sans: "Commissioner", system-ui, -apple-system, sans-serif;
+  --font-mono: "Commissioner", system-ui, sans-serif;
+  --font-script: "Marck Script", cursive;
+
+  /* Motion */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-quint: cubic-bezier(0.83, 0, 0.17, 1);
+}
+
+:root {
+  --gold-gradient: linear-gradient(112deg, #e3d6b0 0%, #b9a878 38%, #9f8c5f 64%, #7e6e45 100%);
+  --sea-gradient: linear-gradient(112deg, #e3d6b0 0%, #c3b083 50%, #9f8c5f 100%);
+  --shadow-soft: 0 26px 60px -30px rgba(0, 0, 0, 0.6);
+  --shadow-lift: 0 50px 110px -45px rgba(0, 0, 0, 0.75);
+  --gold-line: rgba(159, 140, 95, 0.42);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-line);
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: auto;
+  }
+
+  body {
+    background-color: var(--color-navy);
+    color: #e7e0cf;
+    font-family: var(--font-sans);
+    font-weight: 300;
+    letter-spacing: 0.005em;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: 0.005em;
+    line-height: 1.06;
+    color: var(--color-cream);
+  }
+
+  ::selection {
+    background: var(--color-gold);
+    color: #04142b;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    body { cursor: none; }
+    a, button { cursor: none; }
+  }
+
+  ::-webkit-scrollbar { width: 9px; }
+  ::-webkit-scrollbar-track { background: #081a33; }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-gold-deep);
+    border-radius: 99px;
+    border: 2px solid #081a33;
+  }
+  ::-webkit-scrollbar-thumb:hover { background: var(--color-gold); }
+}
+
+@layer utilities {
+  /* Antique-gold foil */
+  .text-gold-foil {
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+  .bg-gold-foil { background: var(--gold-gradient); }
+  .text-sea-foil {
+    background: var(--sea-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+  .bg-sea-foil { background: var(--sea-gradient); }
+
+  /* Romantic script accent (Marck Script — Cyrillic capable) */
+  .script { font-family: var(--font-script); font-weight: 400; }
+
+  /* Elegant letter-spaced label (no mono — couture, not techy) */
+  .eyebrow {
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    letter-spacing: 0.34em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .data-label {
+    font-family: var(--font-sans);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.1em;
+  }
+
+  /* Thin gold frame with a hairline inset — the imperial device */
+  .gold-frame {
+    border: 1px solid var(--gold-line);
+    box-shadow: inset 0 0 0 4px rgba(159, 140, 95, 0.12);
+  }
+
+  .grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.05;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .vignette::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(120% 120% at 50% 32%, transparent 38%, rgba(2, 3, 14, 0.72) 100%);
+  }
+
+  .edge-fade-b {
+    -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  }
+
+  .balance { text-wrap: balance; }
+  .pretty { text-wrap: pretty; }
+  .no-bar { scrollbar-width: none; -ms-overflow-style: none; }
+  .no-bar::-webkit-scrollbar { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  body { cursor: auto !important; }
+}
