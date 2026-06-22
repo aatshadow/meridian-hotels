@@ -29,26 +29,28 @@ export type Case = {
 };
 
 const C = `${B}assets/chaica`;
+const TP = `${B}assets/teos-primorsko`;
+const TK = `${B}assets/teos-kiten`;
 
 export const CASES: Case[] = [
   {
     slug: "chaica",
-    name: "Chaica",
-    native: "Чайка",
-    location: "Primorsko · Bulgaria",
-    kind: "Boutique seafront hotel",
+    name: "Чайка",
+    native: "Първа линия",
+    location: "Приморско · България",
+    kind: "Бутиков хотел на морето",
     year: "2025—26",
-    headline: "From quiet shoulder-seasons to five million views.",
+    headline: "От празен профил до пет милиона гледания.",
     summary:
-      "A seafront hotel with beautiful rooms and an empty content feed. We rebuilt the visual identity, shot the property and turned the social channels into a discovery engine.",
+      "Хотел на първа линия с прекрасни стаи и почти празен профил. Изградихме визуалната им идентичност наново, заснехме хотела и превърнахме социалните мрежи в постоянен поток от нови гости.",
     problem:
-      "Rooms sat unsold outside peak weeks, and almost every booking arrived through an OTA — paying commission on guests the hotel could have reached directly.",
+      "Стаите оставаха празни извън пиковите седмици, а почти всяка резервация идваше през Booking — комисионна върху гости, които хотелът можеше да достигне директно.",
     outcome:
-      "Across one year the channels reached over five million people — 95% of them not yet followers — turning strangers scrolling at home into direct enquiries.",
+      "За една година съдържанието достигна над пет милиона души — 95% от тях напълно непознати — и превърна обикновения скрол у дома в директни запитвания.",
     quote:
-      "For the first time we were watching the rooms fill before the season even started.",
-    quoteBy: "Hotel Chaica · Primorsko",
-    cover: `${C}/orig_16626_53.jpg`,
+      "Имахме толкова много обаждания, че помолихме да спрат да публикуват видеа — телефонът просто не спираше да звъни.",
+    quoteBy: "Хотел Чайка · Приморско",
+    cover: `${C}/facade-fb.jpg`,
     images: [
       `${C}/orig_16626_53.jpg`,
       `${C}/orig_16626_59.jpg`,
@@ -65,45 +67,72 @@ export const CASES: Case[] = [
       `${B}assets/results/chaica-5.png`,
     ],
     stats: [
-      { value: "5.1M", label: "TikTok views", sub: "Jun 2025 — May 2026" },
-      { value: "4.9M", label: "Facebook views", sub: "trailing year" },
-      { value: "95%", label: "Reach from non-followers", sub: "pure discovery" },
-      { value: "+1,171", label: "Net new follows", sub: "in 28 days · +523%" },
+      { value: "5.1M", label: "Гледания в TikTok", sub: "юни 2025 — май 2026" },
+      { value: "4.9M", label: "Гледания във Facebook", sub: "за изминалата година" },
+      { value: "95%", label: "Обхват от непоследователи", sub: "чисто откриване" },
+      { value: "+1,171", label: "Нови последователи", sub: "за 28 дни · +523%" },
     ],
   },
   {
-    slug: "teos",
-    name: "Teos",
-    native: "Теос",
-    location: "Kiten & Primorsko · Bulgaria",
-    kind: "Family beach hotel",
+    slug: "teos-primorsko",
+    name: "Теос Приморско",
+    native: "Апартхотел на плажа",
+    location: "Приморско · България",
+    kind: "Апартхотел на първа линия",
     year: "2025—26",
-    headline: "A feed of short films that the algorithm kept pushing.",
+    headline: "Апартаменти сред дюните, които изведнъж видя цяла България.",
     summary:
-      "A second Primorsko hotel that trusted us with its social presence. The grid filled with short-form videos that travelled far beyond its own audience.",
+      "Апартхотел на първа линия, скрит сред дюните при устието на Дяволската река. Повериха ни социалните си канали — и ги напълнихме с кадри, които пътуваха далеч отвъд собствената им публика.",
     problem:
-      "A small following and no reliable way to reach the holidaymakers already searching for a place on the coast.",
+      "Красив имот на две минути от плажа, но почти невидим онлайн извън Booking — малцина изобщо знаеха, че съществува.",
     outcome:
-      "Video after video crossed into the hundreds of thousands of views — the kind of organic reach that fills rooms without a single euro of ad spend.",
+      "Видео след видео минаваше стотиците хиляди гледания — органичен обхват, който пълни апартаменти без нито евро за реклама.",
     quote:
-      "The videos kept reaching people we could never have paid to reach.",
-    quoteBy: "Hotel Teos · Kiten & Primorsko",
-    cover: `${C}/orig_16626_56.jpg`,
-    images: [`${C}/orig_16626_56.jpg`, `${C}/orig_16626_24.jpg`, `${C}/orig_16626_54.jpg`, `${C}/orig_16626_37.jpg`],
+      "Видеата стигаха до хора, които никога не бихме могли да платим да достигнем.",
+    quoteBy: "Теос · Приморско",
+    cover: `${TP}/6.jpg`,
+    images: [`${TP}/2.jpg`, `${TP}/3.jpg`, `${TP}/4.jpg`, `${TP}/8.jpg`, `${TP}/1.jpg`],
     results: [`${B}assets/results/teos-1.png`],
     stats: [
-      { value: "545K", label: "Top video views", sub: "single organic reel" },
-      { value: "192K", label: "Second-best reel" },
-      { value: "12+", label: "Reels over 20K views" },
-      { value: "€0", label: "Spent on ads", sub: "100% organic" },
+      { value: "545K", label: "Гледания на едно видео", sub: "един органичен рийл" },
+      { value: "95%", label: "Обхват от непоследователи", sub: "чисто откриване" },
+      { value: "8.6", label: "Оценка на гостите", sub: "Booking.com" },
+      { value: "€0", label: "Похарчени за реклама", sub: "100% органично" },
+    ],
+  },
+  {
+    slug: "teos-kiten",
+    name: "Теос Китен",
+    native: "Семеен хотел",
+    location: "Китен · България",
+    kind: "Семеен хотел на плаж Атлиман",
+    year: "2025—26",
+    headline: "Семеен хотел на Атлиман, който алгоритъмът хареса.",
+    summary:
+      "Семеен хотел на първа линия на плаж Атлиман — с ресторант, спа и покривна тераса. Превърнахме спокойния залив в съдържание, което се разнесе из мрежата.",
+    problem:
+      "Малка аудитория и никакъв сигурен начин да стигне до почиващите, които вече търсят място на морето.",
+    outcome:
+      "Десетки видеа над 20 хиляди гледания и рийлове, минали 100 хиляди — чист органичен обхват, който пълни стаи.",
+    quote:
+      "Хора ни намираха онлайн и резервираха директно — за първи път.",
+    quoteBy: "Теос · Китен",
+    cover: `${TK}/1.jpg`,
+    images: [],
+    results: [],
+    stats: [
+      { value: "192K", label: "Гледания на едно видео", sub: "органичен рийл" },
+      { value: "12+", label: "Видеа над 20K гледания", sub: "поредица от хитове" },
+      { value: "8.2", label: "Оценка на гостите", sub: "Booking.com" },
+      { value: "€0", label: "Похарчени за реклама", sub: "100% органично" },
     ],
   },
 ];
 
 /* Headline proof for the homepage — the aggregate story */
 export const HEADLINE_STATS: Stat[] = [
-  { value: "10M+", label: "Organic views generated", sub: "across two hotels" },
-  { value: "95%", label: "Reach beyond existing followers", sub: "new guests, not old fans" },
-  { value: "€0", label: "Ad spend required", sub: "100% organic funnels" },
-  { value: "2", label: "Hotels, one coastline", sub: "Primorsko · Bulgaria" },
+  { value: "10M+", label: "Органични гледания", sub: "за три хотела" },
+  { value: "95%", label: "Обхват извън последователите", sub: "нови гости, не стари фенове" },
+  { value: "€0", label: "Похарчени за реклама", sub: "100% органични фунии" },
+  { value: "3", label: "Хотела, едно крайбрежие", sub: "Приморско · Китен" },
 ];

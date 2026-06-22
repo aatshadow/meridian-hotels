@@ -73,13 +73,13 @@ function Hero() {
           className="mb-8 flex items-center gap-4"
         >
           <span className="h-px w-10 bg-gold" />
-          <span className="eyebrow text-gold">( Proof, in numbers )</span>
+          <span className="eyebrow text-gold">( Доказателство, в числа )</span>
         </motion.div>
 
         <h1 className="max-w-5xl font-display text-[clamp(2.6rem,8vw,7rem)] font-light leading-[0.94] text-pearl">
-          <MaskText text="Two hotels." delay={LOAD + 0.05} />{" "}
+          <MaskText text="Три хотела." delay={LOAD + 0.05} />{" "}
           <span className="text-gold-foil italic">
-            <MaskText text="Ten million views." delay={LOAD + 0.2} />
+            <MaskText text="Десет милиона гледания." delay={LOAD + 0.2} />
           </span>
         </h1>
 
@@ -89,8 +89,8 @@ function Hero() {
           transition={{ delay: LOAD + 0.55, duration: 0.9, ease: EASE_OUT_EXPO }}
           className="pretty mt-9 max-w-xl text-lg leading-relaxed text-pearl/70"
         >
-          No invented numbers. These are the real analytics from two small Primorsko
-          hotels — every view earned organically, not a euro spent on ads.
+          Никакви измислени числа. Това са реалните анализи на нашите хотели — всяко
+          гледане е спечелено органично, без нито един лев за реклама.
         </motion.p>
 
         {/* aggregate headline stats — the big animated row */}
@@ -119,7 +119,7 @@ function Hero() {
         transition={{ delay: LOAD + 1.1, duration: 1 }}
         className="absolute bottom-7 right-6 z-10 hidden items-center gap-3 md:right-10 md:flex"
       >
-        <span className="data-label text-xs text-pearl/45">The receipts</span>
+        <span className="data-label text-xs text-pearl/45">Числата</span>
         <motion.span animate={{ y: [0, 6, 0] }} transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}>
           <ArrowDown size={16} className="text-gold" />
         </motion.span>
@@ -131,13 +131,13 @@ function Hero() {
 /* ========================================================== PROOF MARQUEE */
 function ProofMarquee() {
   const items = [
-    "10M+ organic views",
-    "95% reach from new audiences",
-    "€0 ad spend",
-    "545K on a single reel",
-    "+1,171 follows in 28 days",
-    "Direct bookings",
-    "Primorsko · Black Sea",
+    "10M+ органични гледания",
+    "95% обхват сред нова публика",
+    "€0 за реклама",
+    "545K на едно видео",
+    "+1,171 последователи за 28 дни",
+    "Директни резервации",
+    "Приморско · Черно море",
   ];
   return (
     <section className="border-y border-hairline bg-pearl py-5">
@@ -169,7 +169,7 @@ function CaseStudy({ c, index }: { c: Case; index: number }) {
           <div className="md:col-span-7">
             <Reveal>
               <span className={`eyebrow ${dark ? "text-gold" : "text-gold"}`}>
-                ( Case {num} — {c.kind} )
+                ( Кейс {num} — {c.kind} )
               </span>
             </Reveal>
             <h2
@@ -194,7 +194,7 @@ function CaseStudy({ c, index }: { c: Case; index: number }) {
           style={{ borderColor: dark ? "rgba(245,247,241,0.12)" : "var(--color-hairline)" }}
         >
           <Reveal className={dark ? "bg-sea-night/40 p-8 md:p-10" : "bg-pearl-deep p-8 md:p-10"}>
-            <span className="data-label text-sm text-gold-deep">The problem</span>
+            <span className="data-label text-sm text-gold-deep">Проблемът</span>
             <p className={`pretty mt-5 text-lg leading-relaxed ${dark ? "text-pearl/55" : "text-ink-soft"}`}>
               {c.problem}
             </p>
@@ -206,7 +206,7 @@ function CaseStudy({ c, index }: { c: Case; index: number }) {
           >
             <span className="data-label flex items-center gap-2 text-sm text-gold">
               <span className="h-1.5 w-1.5 rounded-full bg-gold" />
-              The outcome
+              Резултатът
             </span>
             <p className={`pretty mt-5 text-lg leading-relaxed ${dark ? "text-pearl" : "text-sea-deep"}`}>
               {c.outcome}
@@ -230,30 +230,34 @@ function CaseStudy({ c, index }: { c: Case; index: number }) {
         </div>
 
         {/* THE PROOF — result screenshots in framed chrome cards */}
-        <div className="mt-24 md:mt-32">
-          <Reveal>
-            <div className="flex flex-wrap items-end justify-between gap-4">
-              <h3 className={`font-display text-[clamp(1.6rem,3.6vw,2.8rem)] font-light leading-none ${dark ? "text-pearl" : "text-sea-deep"}`}>
-                The proof, unedited.
-              </h3>
-              <span className={`data-label text-xs ${dark ? "text-pearl/45" : "text-ink-soft"}`}>
-                Screenshots · {c.name} analytics
-              </span>
-            </div>
-          </Reveal>
-          <ResultsGrid results={c.results} name={c.name} dark={dark} />
-        </div>
+        {c.results.length > 0 && (
+          <div className="mt-24 md:mt-32">
+            <Reveal>
+              <div className="flex flex-wrap items-end justify-between gap-4">
+                <h3 className={`font-display text-[clamp(1.6rem,3.6vw,2.8rem)] font-light leading-none ${dark ? "text-pearl" : "text-sea-deep"}`}>
+                  Доказателството, без редакция.
+                </h3>
+                <span className={`data-label text-xs ${dark ? "text-pearl/45" : "text-ink-soft"}`}>
+                  Скрийншоти · анализи на {c.name}
+                </span>
+              </div>
+            </Reveal>
+            <ResultsGrid results={c.results} name={c.name} dark={dark} />
+          </div>
+        )}
 
         {/* small image gallery */}
-        <div className="mt-24 md:mt-32">
-          <HorizonLine
-            className="mb-12"
-            left="( From the shoot )"
-            right={c.location}
-            tone={dark ? "sea" : "faint"}
-          />
-          <GalleryGrid images={c.images} />
-        </div>
+        {c.images.length > 0 && (
+          <div className="mt-24 md:mt-32">
+            <HorizonLine
+              className="mb-12"
+              left="( От фотосесията )"
+              right={c.location}
+              tone={dark ? "sea" : "faint"}
+            />
+            <GalleryGrid images={c.images} />
+          </div>
+        )}
 
         {/* THE QUOTE */}
         <div className="mt-24 md:mt-32">
@@ -306,7 +310,7 @@ function CoverPanel({ c, num, dark }: { c: Case; num: string; dark: boolean }) {
       <div className="absolute inset-0 mx-auto flex max-w-[1400px] flex-col justify-between px-6 py-8 md:px-10 md:py-12">
         {/* top tide-mark row */}
         <div className="flex items-center justify-between">
-          <span className="data-label text-xs text-pearl/75">Case {num} / 02</span>
+          <span className="data-label text-xs text-pearl/75">Кейс {num} / {String(CASES.length).padStart(2, "0")}</span>
           <span className="data-label text-xs text-pearl/60">{BRAND.coordinates}</span>
         </div>
 
@@ -388,13 +392,13 @@ function ResultsGrid({ results, name, dark }: { results: string[]; name: string;
                 dark ? "text-pearl/45" : "text-ink-soft"
               }`}
             >
-              {name} — analytics 0{i + 1}
+              {name} — анализи 0{i + 1}
             </span>
           </div>
           <div className={`overflow-hidden ${dark ? "bg-sea-night/30" : "bg-pearl-deep/40"}`}>
             <img
               src={src}
-              alt={`${name} analytics screenshot ${i + 1}`}
+              alt={`скрийншот с анализи на ${name} ${i + 1}`}
               loading="lazy"
               className="h-full w-full object-contain transition-transform duration-[1200ms] ease-out group-hover:scale-[1.02]"
             />
@@ -432,26 +436,26 @@ function ClosingCTA() {
   return (
     <section className="bg-pearl-deep py-28 md:py-40">
       <div className="mx-auto max-w-[1400px] px-6 md:px-10">
-        <HorizonLine left="( Your hotel, next )" right={BRAND.coordinates} />
+        <HorizonLine left="( Вашият хотел е следващият )" right={BRAND.coordinates} />
         <div className="mt-14 flex flex-col items-start justify-between gap-12 md:flex-row md:items-end">
           <h2 className="max-w-3xl font-display text-[clamp(2.2rem,5.5vw,4.6rem)] font-light leading-[1.0] text-sea-deep">
-            <MaskText text="These are real rooms," />
+            <MaskText text="Това са реални стаи," />
             <br />
             <span className="text-gold-foil italic">
-              <MaskText text="filled by real numbers." delay={0.12} />
+              <MaskText text="пълни с реални числа." delay={0.12} />
             </span>
           </h2>
           <Reveal className="max-w-sm">
             <p className="pretty text-ink-soft">
-              Two hotels on one coastline. The same playbook is ready for yours —
-              the website, the films, the photography, working as one funnel.
+              Три хотела на едно крайбрежие. Същата система е готова и за вашия —
+              сайт, видео и фотография, които работят като едно цяло.
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-4">
               <MagneticButton to="/contact" variant="gold">
-                Book a call
+                Запази разговор
               </MagneticButton>
               <MagneticButton to="/summer-2026" variant="outline">
-                Summer 2026
+                Лято 2026
               </MagneticButton>
             </div>
           </Reveal>
@@ -462,7 +466,7 @@ function ClosingCTA() {
             to="/about"
             className="group inline-flex items-center gap-2 font-mono text-[0.75rem] uppercase tracking-[0.18em] text-sea-deep"
           >
-            How we work
+            Как работим
             <ArrowUpRight
               size={15}
               className="text-gold transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"

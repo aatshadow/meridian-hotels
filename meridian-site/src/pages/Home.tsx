@@ -69,9 +69,9 @@ function Hero() {
         </motion.div>
 
         <h1 className="max-w-5xl font-display text-[clamp(3rem,9vw,7.5rem)] font-light leading-[0.92] text-pearl [text-shadow:0_2px_40px_rgba(8,31,41,0.45)]">
-          <MaskText text="We fill" delay={LOAD + 0.05} />{" "}
+          <MaskText text="Пълни стаи." delay={LOAD + 0.05} />{" "}
           <span className="text-gold-foil italic">
-            <MaskText text="coastal hotels." delay={LOAD + 0.18} />
+            <MaskText text="Всяко лято." delay={LOAD + 0.18} />
           </span>
         </h1>
 
@@ -81,7 +81,7 @@ function Hero() {
           transition={{ delay: LOAD + 0.5, duration: 0.9, ease: EASE_OUT_EXPO }}
           className="pretty mt-8 max-w-xl text-lg leading-relaxed text-pearl/75"
         >
-          Cinematic websites, organic reels and photography that turn a quiet scroll into a direct booking — season after season.
+          Правим ви сайт, снимки и видеа, които събират хиляди гледания — и пълнят хотела ви с директни резервации, сезон след сезон.
         </motion.p>
 
         <motion.div
@@ -91,10 +91,10 @@ function Hero() {
           className="mt-10 flex flex-wrap items-center gap-4"
         >
           <MagneticButton to="/contact" variant="gold">
-            Book a call
+            Запази разговор
           </MagneticButton>
           <MagneticButton to="/success-cases" variant="light">
-            See the results
+            Виж резултатите
           </MagneticButton>
         </motion.div>
       </motion.div>
@@ -105,7 +105,7 @@ function Hero() {
         transition={{ delay: LOAD + 1, duration: 1 }}
         className="absolute bottom-7 right-6 z-10 hidden items-center gap-3 md:right-10 md:flex"
       >
-        <span className="data-label text-xs text-pearl/55">Scroll</span>
+        <span className="data-label text-xs text-pearl/55">Скрол</span>
         <motion.span animate={{ y: [0, 6, 0] }} transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}>
           <ArrowDown size={16} className="text-gold" />
         </motion.span>
@@ -116,7 +116,7 @@ function Hero() {
 
 /* -------------------------------------------------------- PROOF MARQUEE */
 function ProofMarquee() {
-  const items = ["5.1M organic views", "95% reach from new audiences", "€0 ad spend", "Direct bookings", "Primorsko · Black Sea", "Booked-out summers"];
+  const items = ["5.1M органични гледания", "95% обхват сред нова публика", "€0 за реклама", "Директни резервации", "Приморско · Черно море", "Разпродадени лета"];
   return (
     <section className="border-y border-hairline bg-pearl py-5">
       <Marquee speed={34}>
@@ -136,23 +136,23 @@ function Statement() {
   return (
     <section className="mx-auto max-w-[1400px] px-6 py-28 md:px-10 md:py-40">
       <Reveal>
-        <span className="eyebrow text-gold">( What we do )</span>
+        <span className="eyebrow text-gold">( Замислете се )</span>
       </Reveal>
       <h2 className="mt-8 max-w-5xl font-display text-[clamp(1.9rem,4.4vw,3.6rem)] font-light leading-[1.08] text-sea-deep">
         <MaskText
-          text="An empty room is revenue you can never get back. We build the website, the films and the photography that keep coastal hotels full —"
+          text="Когато някой избира хотел на морето, решава за секунди — по снимките, по видеото, по това, което вижда онлайн."
           stagger={0.018}
         />{" "}
         <span className="text-ink-soft">
-          <MaskText text="and keep the bookings direct." stagger={0.018} delay={0.1} />
+          <MaskText text="Ние се грижим вашият хотел да е сред първите, които вижда — и да поиска точно него." stagger={0.018} delay={0.1} />
         </span>
       </h2>
 
       <div className="mt-16 grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-hairline bg-hairline md:grid-cols-3">
         {[
-          { k: "Full all season", v: "We turn quiet shoulder weeks into booked-out months." },
-          { k: "Direct, not OTA", v: "Guests who book with you — not through a 20% commission." },
-          { k: "Organic, compounding", v: "Reach that grows every week, with no ad budget to feed." },
+          { k: "Пълни цял сезон", v: "Превръщаме тихите седмици извън пика в разпродадени месеци." },
+          { k: "Директно, не през посредник", v: "Гости, които резервират директно при вас, а не през чужда платформа." },
+          { k: "Органично, с натрупване", v: "Обхват, който расте всяка седмица — без платена реклама." },
         ].map((b, i) => (
           <Reveal i={i} key={b.k} className="bg-pearl p-8">
             <span className="data-label text-sm text-gold">0{i + 1}</span>
@@ -167,25 +167,25 @@ function Statement() {
 
 /* ------------------------------------------------------------ CONTRAST */
 function Contrast() {
-  const without = ["Rooms unsold outside peak weeks", "Bookings arrive through OTAs, minus commission", "A feed nobody sees", "Guessing whether summer fills"];
-  const wth = ["A booking funnel working every night", "Guests booking you directly", "Films the algorithm pushes to new people", "A season that sells out before it starts"];
+  const without = ["Празни стаи извън пиковите седмици", "Резервации през чужди платформи, не директно", "Профил, който никой не вижда", "Лятото — на принципа дано се напълни"];
+  const wth = ["Система за резервации, която работи всяка нощ", "Гости, които резервират директно при вас", "Видеа, които алгоритъмът показва на нова публика", "Сезон, разпродаден още преди да е започнал"];
   return (
     <section className="grain relative overflow-hidden bg-sea-deep py-28 md:py-40">
       <div className="mx-auto max-w-[1400px] px-6 md:px-10">
         <Reveal>
-          <span className="eyebrow text-gold">( The shift )</span>
+          <span className="eyebrow text-gold">( Промяната )</span>
           <h2 className="mt-7 max-w-3xl font-display text-[clamp(2rem,5vw,4rem)] font-light leading-[1.0] text-pearl">
-            <MaskText text="From hoping it fills" />
+            <MaskText text="От празни стаи" />
             <br />
             <span className="text-gold-foil italic">
-              <MaskText text="to watching it sell out." delay={0.12} />
+              <MaskText text="до разпродаден сезон." delay={0.12} />
             </span>
           </h2>
         </Reveal>
 
         <div className="mt-16 grid grid-cols-1 gap-12 md:mt-20 md:grid-cols-2 md:gap-20">
           <div>
-            <span className="data-label text-sm text-pearl/45">Without a system</span>
+            <span className="data-label text-sm text-pearl/45">Без система</span>
             <ul className="mt-7 flex flex-col">
               {without.map((t, i) => (
                 <Reveal i={i} key={t} className="border-t border-pearl/10 py-5">
@@ -195,7 +195,7 @@ function Contrast() {
             </ul>
           </div>
           <div>
-            <span className="data-label text-sm text-gold">With {BRAND.name}</span>
+            <span className="data-label text-sm text-gold">С {BRAND.name}</span>
             <ul className="mt-7 flex flex-col">
               {wth.map((t, i) => (
                 <Reveal i={i} key={t} className="flex items-start gap-3 border-t border-gold/25 py-5">
@@ -212,7 +212,7 @@ function Contrast() {
 }
 
 /* --------------------------------------------------------------- OFFER */
-const OFFER_IMAGES = [PHOTOS.roomFramed, PHOTOS.exterior, PHOTOS.pool];
+const OFFER_IMAGES = [PHOTOS.roomFramed, PHOTOS.exterior, PHOTOS.bay];
 
 function Offer() {
   return (
@@ -220,17 +220,17 @@ function Offer() {
       <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
         <div>
           <Reveal>
-            <span className="eyebrow text-gold">( The complete pack )</span>
+            <span className="eyebrow text-gold">( Как го постигаме )</span>
           </Reveal>
           <h2 className="mt-7 max-w-2xl font-display text-[clamp(2rem,5vw,4rem)] font-light leading-[1.0] text-sea-deep">
-            <MaskText text="One funnel." />
+            <MaskText text="Ето как." />
             <br />
-            <MaskText text="Three pieces." delay={0.1} />
+            <MaskText text="Стъпка по стъпка." delay={0.1} />
           </h2>
         </div>
         <Reveal className="max-w-sm">
           <p className="pretty text-ink-soft">
-            Everything a coastal hotel needs to fill itself — built to work together, from the first scroll to the booked night.
+            Правим ви сайт, който продава. Снимаме хотела — снимки и видеа, които събират хиляди гледания. Резултатът: пълни стаи и звънящ телефон, директно при вас.
           </p>
         </Reveal>
       </div>
@@ -267,7 +267,7 @@ function Offer() {
 
       <Reveal className="mt-14">
         <Link to="/summer-2026" className="group inline-flex items-center gap-2 font-mono text-[0.75rem] uppercase tracking-[0.18em] text-sea-deep">
-          See the Summer 2026 programme
+          Виж програмата Лято 2026
           <ArrowUpRight size={15} className="text-gold transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
         </Link>
       </Reveal>
@@ -281,7 +281,7 @@ function Proof() {
     <section className="bg-pearl-deep py-28 md:py-36">
       <div className="mx-auto max-w-[1400px] px-6 md:px-10">
         <Reveal>
-          <span className="eyebrow text-gold">( The proof )</span>
+          <span className="eyebrow text-gold">( Доказателството )</span>
         </Reveal>
         <div className="mt-8 grid grid-cols-2 gap-y-12 md:grid-cols-4 md:gap-8">
           {HEADLINE_STATS.map((s, i) => (
@@ -290,13 +290,13 @@ function Proof() {
             </Reveal>
           ))}
         </div>
-        <HorizonLine className="mt-16" left="Real clients · real numbers" right={BRAND.coordinates} />
+        <HorizonLine className="mt-16" left="Реални клиенти · реални числа" right={BRAND.coordinates} />
         <Reveal className="mt-10">
           <p className="max-w-2xl font-display text-2xl font-light leading-snug text-sea-deep md:text-3xl">
-            Two small Primorsko hotels. Over ten million organic views. Not a euro spent on ads.
+            Три хотела. Над десет милиона органични гледания. И стаи, пълни до отказ — без платена реклама.
           </p>
           <Link to="/success-cases" className="group mt-7 inline-flex items-center gap-2 font-mono text-[0.75rem] uppercase tracking-[0.18em] text-sea-deep">
-            Read the success cases
+            Виж резултатите
             <ArrowUpRight size={15} className="text-gold transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </Link>
         </Reveal>
@@ -336,11 +336,11 @@ function CasesTeaser() {
     <section className="mx-auto max-w-[1400px] px-6 py-28 md:px-10 md:py-40">
       <div className="flex items-end justify-between">
         <Reveal>
-          <span className="eyebrow text-gold">( Selected work )</span>
+          <span className="eyebrow text-gold">( Избрани проекти )</span>
           <h2 className="mt-7 font-display text-[clamp(2rem,5vw,4rem)] font-light leading-none text-sea-deep">
-            <MaskText text="The hotels" />
+            <MaskText text="Хотелите" />
             <br />
-            <MaskText text="we filled." delay={0.1} />
+            <MaskText text="които напълнихме." delay={0.1} />
           </h2>
         </Reveal>
       </div>
@@ -385,7 +385,7 @@ function GalleryStrip() {
   return (
     <section className="overflow-hidden bg-pearl pb-28 md:pb-40">
       <div className="mx-auto mb-12 max-w-[1400px] px-6 md:px-10">
-        <HorizonLine left="( Photography )" right="Chaica · Primorsko" />
+        <HorizonLine left="( Фотография )" right="Чайка · Приморско" />
       </div>
       <Marquee speed={55}>
         {row.map((src, i) => (

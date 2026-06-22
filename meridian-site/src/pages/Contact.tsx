@@ -37,7 +37,7 @@ function Hero() {
       >
         <img
           src={CASES[0].images[5]}
-          alt="Dusk on the Black Sea terrace"
+          alt="Здрач на терасата над Черно море"
           loading="lazy"
           className="h-full w-full object-cover opacity-60"
         />
@@ -56,14 +56,14 @@ function Hero() {
             className="mb-7 flex items-center gap-4"
           >
             <span className="h-px w-10 bg-gold" />
-            <span className="eyebrow text-gold">( Let&rsquo;s begin )</span>
+            <span className="eyebrow text-gold">( Да започнем )</span>
           </motion.div>
 
           <h1 className="max-w-2xl font-display text-[clamp(2.6rem,7vw,5.5rem)] font-light leading-[0.96] text-pearl">
-            <MaskText text="Let’s fill" delay={0.1} />
+            <MaskText text="Да напълним" delay={0.1} />
             <br />
             <span className="text-gold-foil italic">
-              <MaskText text="your hotel." delay={0.22} />
+              <MaskText text="хотела ви." delay={0.22} />
             </span>
           </h1>
 
@@ -73,8 +73,8 @@ function Hero() {
             transition={{ duration: 0.9, ease: EASE_OUT_EXPO, delay: 0.5 }}
             className="pretty mt-8 max-w-md text-lg leading-relaxed text-pearl/70"
           >
-            Tell us about your rooms and your coast. We&rsquo;ll come back within a day with a clear,
-            honest plan to fill your season — no pitch, no pressure.
+            Разкажете ни за стаите си и за вашия бряг. До ден ще ви върнем с ясен, честен план как
+            да напълним сезона ви — без презентации, без натиск.
           </motion.p>
 
           <motion.div
@@ -83,7 +83,7 @@ function Hero() {
             transition={{ duration: 0.9, ease: EASE_OUT_EXPO, delay: 0.6 }}
             className="mt-12 hidden flex-col gap-5 md:flex"
           >
-            <HorizonLine tone="sea" left="( Reply time )" right="Within 24 hours" />
+            <HorizonLine tone="sea" left="( Време за отговор )" right="До 24 часа" />
             <p className="data-label text-xs text-pearl/45">
               {BRAND.descriptor} — {BRAND.home}
             </p>
@@ -122,7 +122,7 @@ function ContactForm() {
       <div className="absolute inset-x-0 top-0 h-px bg-gold-foil opacity-70" />
 
       <div className="mb-7 flex items-baseline justify-between gap-4">
-        <span className="eyebrow text-pearl/55">( Book a call )</span>
+        <span className="eyebrow text-pearl/55">( Запази разговор )</span>
         <span className="data-label text-[0.65rem] text-gold">01 / 01</span>
       </div>
 
@@ -144,10 +144,10 @@ function ContactForm() {
               <Check size={22} strokeWidth={1.8} />
             </motion.span>
             <h3 className="mt-7 font-display text-[clamp(1.8rem,4vw,2.6rem)] font-light leading-[1.05] text-pearl">
-              Thank you — we&rsquo;ll be in touch within 24 hours.
+              Благодарим — ще се свържем с вас до 24 часа.
             </h3>
             <p className="pretty mt-4 max-w-sm text-pearl/60">
-              Your note is on its way to our desk in Primorsko. In the meantime, you can reach us directly.
+              Съобщението ви вече пътува към студиото ни в Приморско. Дотогава можете да се свържете с нас директно.
             </p>
             <a
               href={`mailto:${BRAND.email}`}
@@ -170,54 +170,54 @@ function ContactForm() {
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
               <div>
                 <label htmlFor="name" className={FIELD_LABEL}>
-                  Name
+                  Име
                 </label>
-                <input id="name" name="name" type="text" required placeholder="Your name" className={FIELD} />
+                <input id="name" name="name" type="text" required placeholder="Вашето име" className={FIELD} />
               </div>
               <div>
                 <label htmlFor="hotel" className={FIELD_LABEL}>
-                  Hotel name
+                  Име на хотела
                 </label>
-                <input id="hotel" name="hotel" type="text" required placeholder="Your hotel" className={FIELD} />
+                <input id="hotel" name="hotel" type="text" required placeholder="Вашият хотел" className={FIELD} />
               </div>
             </div>
 
             <div>
               <label htmlFor="email" className={FIELD_LABEL}>
-                Email
+                Имейл
               </label>
               <input id="email" name="email" type="email" required placeholder="you@hotel.com" className={FIELD} />
             </div>
 
             <div>
               <label htmlFor="message" className={FIELD_LABEL}>
-                Tell us about your hotel
+                Разкажете ни за хотела си
               </label>
               <textarea
                 id="message"
                 name="message"
                 rows={4}
                 required
-                placeholder="Where you are on the coast, how many rooms, and what a full season would mean to you."
+                placeholder="Къде сте на брега, колко стаи имате и какво би означавал за вас един пълен сезон."
                 className={`${FIELD} resize-none`}
               />
             </div>
 
             <div className="mt-1 flex flex-wrap items-center gap-x-6 gap-y-4">
               <MagneticButton type="submit" variant="gold">
-                Send &amp; book a call
+                Изпрати и запази разговор
               </MagneticButton>
               <a
                 href={`mailto:${BRAND.email}`}
                 className="group inline-flex items-center gap-2 font-mono text-[0.7rem] uppercase tracking-[0.18em] text-pearl/55 transition-colors hover:text-gold"
               >
-                or email us
+                или ни пишете на имейл
                 <ArrowUpRight size={14} className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </a>
             </div>
 
             <p className="data-label mt-1 text-[0.62rem] leading-relaxed text-pearl/30">
-              No spam, ever. One reply from a real person, within a day.
+              Без спам. Отговаря ви истински човек, още същия ден.
             </p>
           </motion.form>
         )}
@@ -229,26 +229,26 @@ function ContactForm() {
 /* ------------------------------------------------------- CONTACT DETAILS */
 function ContactDetails() {
   const rows = [
-    { icon: Mail, label: "Email", value: BRAND.email, href: `mailto:${BRAND.email}` },
+    { icon: Mail, label: "Имейл", value: BRAND.email, href: `mailto:${BRAND.email}` },
     {
       icon: Instagram,
       label: "Instagram",
       value: BRAND.instagram,
       href: `https://instagram.com/${BRAND.instagram.replace(/^@/, "")}`,
     },
-    { icon: MapPin, label: "Studio", value: BRAND.home, href: undefined as string | undefined },
-    { icon: Compass, label: "Coordinates", value: BRAND.coordinates, href: undefined as string | undefined },
+    { icon: MapPin, label: "Студио", value: BRAND.home, href: undefined as string | undefined },
+    { icon: Compass, label: "Координати", value: BRAND.coordinates, href: undefined as string | undefined },
   ];
 
   return (
     <section className="mx-auto max-w-[1400px] px-6 py-28 md:px-10 md:py-40">
       <Reveal>
-        <span className="eyebrow text-gold">( Find us )</span>
+        <span className="eyebrow text-gold">( Намерете ни )</span>
       </Reveal>
       <h2 className="mt-7 max-w-3xl font-display text-[clamp(1.9rem,4.4vw,3.4rem)] font-light leading-[1.06] text-sea-deep">
-        <MaskText text="A small studio on the" stagger={0.02} />{" "}
+        <MaskText text="Малко студио на" stagger={0.02} />{" "}
         <span className="text-ink-soft">
-          <MaskText text="Bulgarian Black Sea." stagger={0.02} delay={0.08} />
+          <MaskText text="българското Черноморие." stagger={0.02} delay={0.08} />
         </span>
       </h2>
 
@@ -297,9 +297,9 @@ function ContactDetails() {
 
 /* ------------------------------------------------------ WHAT HAPPENS NEXT */
 const STEPS = [
-  { no: "01", title: "We talk", body: "A relaxed call. You tell us about your hotel and your coast; we listen for where the rooms go quiet." },
-  { no: "02", title: "We plan your season", body: "A clear, honest plan — website, films and photography — built around the months you most need to fill." },
-  { no: "03", title: "We build & you fill", body: "We make it all, then watch the reach grow week after week — direct bookings, no ad budget to feed." },
+  { no: "01", title: "Говорим", body: "Спокоен разговор. Разказвате ни за хотела и брега си; ние се вслушваме къде стаите остават празни." },
+  { no: "02", title: "Планираме сезона ви", body: "Ясен, честен план — сайт, видео и фотография — изграден около месеците, които най-много трябва да напълните." },
+  { no: "03", title: "Ние творим, вие пълните", body: "Създаваме всичко, а после гледаме как обхватът расте седмица след седмица — директни резервации, без нито лев за реклама." },
 ];
 
 function WhatHappensNext() {
@@ -308,12 +308,12 @@ function WhatHappensNext() {
       <div className="vignette absolute inset-0" />
       <div className="relative z-10 mx-auto max-w-[1400px] px-6 md:px-10">
         <Reveal>
-          <span className="eyebrow text-gold">( What happens next )</span>
+          <span className="eyebrow text-gold">( Какво следва )</span>
           <h2 className="mt-7 max-w-3xl font-display text-[clamp(2rem,5vw,4rem)] font-light leading-[1.0] text-pearl">
-            <MaskText text="Three steps" />
+            <MaskText text="Три стъпки" />
             <br />
             <span className="text-gold-foil italic">
-              <MaskText text="to a full season." delay={0.12} />
+              <MaskText text="до пълен сезон." delay={0.12} />
             </span>
           </h2>
         </Reveal>
@@ -334,12 +334,12 @@ function WhatHappensNext() {
         <div className="mt-16 flex flex-col items-start justify-between gap-8 md:flex-row md:items-end">
           <p className="max-w-xl font-display text-2xl font-light leading-snug text-pearl md:text-3xl">
             <MaskText
-              text="Two small Primorsko hotels. Over ten million organic views. Let’s make yours the third."
+              text="Три хотела по Черноморието. Над десет милиона органични гледания. Нека вашият е следващият."
               stagger={0.016}
             />
           </p>
           <MagneticButton href={`mailto:${BRAND.email}`} variant="gold" className="shrink-0">
-            Start the conversation
+            Започни разговора
           </MagneticButton>
         </div>
       </div>

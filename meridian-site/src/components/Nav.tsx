@@ -45,7 +45,7 @@ export function Nav() {
           }`}
         />
         <nav className="relative mx-auto flex max-w-[1400px] items-center justify-between px-6 py-4 md:px-10">
-          <Link to="/" aria-label={`${BRAND.name} — home`}>
+          <Link to="/" aria-label={`${BRAND.name} — начало`}>
             <Logo />
           </Link>
 
@@ -73,13 +73,13 @@ export function Nav() {
 
           <div className="hidden lg:block">
             <MagneticButton to="/contact" variant="solid" className="!px-6 !py-3">
-              Book a call
+              Запази разговор
             </MagneticButton>
           </div>
 
           {/* Mobile toggle */}
           <button
-            aria-label="Open menu"
+            aria-label="Отвори меню"
             onClick={() => setOpen((o) => !o)}
             className="relative z-[110] flex h-10 w-10 flex-col items-center justify-center gap-1.5 lg:hidden"
           >

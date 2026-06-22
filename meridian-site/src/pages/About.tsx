@@ -44,13 +44,13 @@ function Hero() {
           className="flex items-center gap-4"
         >
           <span className="h-px w-10 bg-gold" />
-          <span className="eyebrow text-gold">( The studio )</span>
+          <span className="eyebrow text-gold">( Студиото )</span>
         </motion.div>
 
         <h1 className="mt-8 max-w-5xl font-display text-[clamp(2.4rem,6.4vw,5.6rem)] font-light leading-[0.98] text-sea-deep">
-          <MaskText text="A studio on the Black Sea," delay={LOAD + 0.05} />{" "}
+          <MaskText text="Студио на Черно море," delay={LOAD + 0.05} />{" "}
           <span className="text-gold-foil italic">
-            <MaskText text="built for any coastline." delay={LOAD + 0.2} />
+            <MaskText text="създадено за всяко крайбрежие." delay={LOAD + 0.2} />
           </span>
         </h1>
 
@@ -61,9 +61,9 @@ function Hero() {
             transition={{ delay: LOAD + 0.5, duration: 0.9, ease: EASE_OUT_EXPO }}
             className="pretty max-w-xl text-lg leading-relaxed text-ink-soft"
           >
-            {BRAND.name} is a small hotel growth studio that treats a property like a place worth
-            filming. We build the websites, the films and the photography that keep coastal hotels
-            full — and keep their bookings direct.
+            {BRAND.name} е малко студио за растеж на хотели, което вижда във всеки имот място,
+            достойно да бъде заснето. Изграждаме сайтовете, видеата и фотографията, които държат
+            хотелите по Черноморието пълни — и резервациите им директни.
           </motion.p>
 
           <motion.div
@@ -77,14 +77,14 @@ function Hero() {
           </motion.div>
         </div>
 
-        <HorizonLine className="mt-12" left="( Who we are )" right={BRAND.coordinates} />
+        <HorizonLine className="mt-12" left="( Кои сме ние )" right={BRAND.coordinates} />
       </div>
 
       <div className="mt-14 overflow-hidden md:mt-20">
         <motion.div style={{ y: imgY, scale: imgScale }}>
           <RevealImage
             src={PHOTOS.exterior}
-            alt={`${BRAND.name} — the seafront facade in Primorsko`}
+            alt={`${BRAND.name} — фасадата на първа линия в Приморско`}
             className="aspect-[16/9] w-full md:aspect-[21/9]"
           />
         </motion.div>
@@ -98,29 +98,30 @@ function Philosophy() {
   return (
     <section className="mx-auto max-w-[1400px] px-6 py-28 md:px-10 md:py-40">
       <Reveal>
-        <span className="eyebrow text-gold">( Philosophy )</span>
+        <span className="eyebrow text-gold">( Философия )</span>
       </Reveal>
       <h2 className="mt-8 max-w-5xl font-display text-[clamp(1.9rem,4.6vw,3.8rem)] font-light leading-[1.06] text-sea-deep">
         <MaskText
-          text="We treat a hotel like a place worth filming. Rooted in Primorsko, we make coastal hotels impossible to scroll past —"
+          text="Виждаме в хотела място, достойно да бъде заснето. С корени в Приморско, правим хотелите по Черноморието невъзможни за подминаване —"
           stagger={0.016}
         />{" "}
         <span className="text-ink-soft">
-          <MaskText text="and we keep their bookings direct." stagger={0.016} delay={0.12} />
+          <MaskText text="и държим резервациите им директни." stagger={0.016} delay={0.12} />
         </span>
       </h2>
 
       <div className="mt-16 grid grid-cols-1 gap-12 md:mt-20 md:grid-cols-12 md:gap-16">
         <Reveal className="md:col-span-7">
           <p className="pretty max-w-2xl text-lg leading-relaxed text-ink-soft">
-            A beautiful hotel and an empty feed is a quiet kind of loss. The rooms are there, the
-            light is there, the sea is there — and nobody scrolling at home ever sees it. We exist to
-            close that gap: to put the place in front of the people already dreaming about the coast,
-            and to make the booking the easy part.
+            Красив хотел с празен профил е тиха загуба. Стаите ги има, светлината я има, морето го
+            има — а хората, които скролят у дома, така и не ги виждат. Съществуваме, за да запълним
+            тази празнина: да изправим мястото пред онези, които вече мечтаят за брега, и да направим
+            резервацията лесната част.
           </p>
           <p className="pretty mt-6 max-w-2xl text-lg leading-relaxed text-ink-soft">
-            We are deliberately small, and that is the point. Fewer clients, more care — every site,
-            every reel, every frame made by people who have stood on that terrace at golden hour.
+            Малки сме нарочно и точно в това е силата ни. По-малко клиенти, повече внимание — всеки
+            сайт, всеки клип, всеки кадър е дело на хора, които сами са стояли на онази тераса в златния
+            час.
           </p>
         </Reveal>
 
@@ -128,7 +129,7 @@ function Philosophy() {
           <div className="overflow-hidden rounded-2xl">
             <RevealImage
               src={PHOTOS.terrace}
-              alt="A hotel terrace at golden hour over the Black Sea"
+              alt="Хотелска тераса в златния час над Черно море"
               className="aspect-[4/5] w-full"
             />
           </div>
@@ -142,23 +143,23 @@ function Philosophy() {
 const PRINCIPLES = [
   {
     no: "01",
-    title: "Direct over OTA",
-    body: "Every funnel is built to win the booking for the hotel — not to feed a commission to a platform that owns the guest.",
+    title: "Директни, не през посредници",
+    body: "Всичко е изградено да спечели резервацията за хотела — а не да тъпче комисиона в платформа, която държи госта за себе си.",
   },
   {
     no: "02",
-    title: "Organic over ads",
-    body: "Reach that compounds week after week, with no ad budget to keep alive. Over ten million views, zero euros spent.",
+    title: "Органично, не платено",
+    body: "Обхват, който се натрупва седмица след седмица, без рекламен бюджет, който да го крепи. Над десет милиона гледания, нула похарчени левове.",
   },
   {
     no: "03",
-    title: "Craft over templates",
-    body: "No off-the-shelf themes, no stock reels. Each property is shot, written and built from scratch to feel like itself.",
+    title: "Майсторство, не шаблони",
+    body: "Никакви готови шаблони, никакви стокови кадри. Всеки имот е заснет, написан и изграден от нулата, за да изглежда като себе си.",
   },
   {
     no: "04",
-    title: "Local eyes, global reach",
-    body: "We know this coast intimately and shoot it like locals — then put it in front of the whole internet.",
+    title: "Местен поглед, глобален обхват",
+    body: "Познаваме това крайбрежие до болка и го снимаме като местни — а после го изправяме пред целия свят.",
   },
 ];
 
@@ -168,19 +169,19 @@ function Principles() {
       <div className="mx-auto max-w-[1400px] px-6 md:px-10">
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <Reveal>
-            <span className="eyebrow text-gold">( How we work )</span>
+            <span className="eyebrow text-gold">( Как работим )</span>
             <h2 className="mt-7 max-w-3xl font-display text-[clamp(2rem,5vw,4rem)] font-light leading-[1.0] text-pearl">
-              <MaskText text="Four rules" />
+              <MaskText text="Четири правила," />
               <br />
               <span className="text-gold-foil italic">
-                <MaskText text="we never bend." delay={0.12} />
+                <MaskText text="които никога не нарушаваме." delay={0.12} />
               </span>
             </h2>
           </Reveal>
           <Reveal className="max-w-sm">
             <p className="pretty text-pearl/65">
-              A method, not a mood. These are the decisions we make on every project, before a single
-              frame is shot.
+              Метод, а не настроение. Това са решенията, които вземаме във всеки проект още преди да е
+              заснет и един кадър.
             </p>
           </Reveal>
         </div>
@@ -213,33 +214,32 @@ function WhereWeWork() {
       <div className="grid grid-cols-1 gap-14 md:grid-cols-12 md:gap-16">
         <div className="md:col-span-6">
           <Reveal>
-            <span className="eyebrow text-gold">( Where we work )</span>
+            <span className="eyebrow text-gold">( Къде работим )</span>
             <h2 className="mt-7 max-w-xl font-display text-[clamp(2rem,5vw,4rem)] font-light leading-[1.02] text-sea-deep">
-              <MaskText text="Home is" />{" "}
+              <MaskText text="Домът е" />{" "}
               <span className="text-gold-foil italic">
-                <MaskText text="Primorsko." delay={0.1} />
+                <MaskText text="Приморско." delay={0.1} />
               </span>
               <br />
-              <MaskText text="The coast is the brief." delay={0.18} />
+              <MaskText text="Крайбрежието е заданието." delay={0.18} />
             </h2>
           </Reveal>
 
           <Reveal i={1}>
             <p className="pretty mt-8 max-w-md text-lg leading-relaxed text-ink-soft">
-              We grew up on the Bulgarian Black Sea — the bay, the long light, the shoulder-season
-              quiet. It is where we learned to fill rooms, and where the work is still made. From
-              here, we travel: the method is built for any coastline that needs to be impossible to
-              scroll past.
+              Израснахме на българското Черноморие — заливът, дългата светлина, тишината извън сезона.
+              Тук се научихме да пълним стаи и тук все още се върши работата. Оттук тръгваме на път: методът е
+              създаден за всяко крайбрежие, което иска да стане невъзможно за подминаване.
             </p>
           </Reveal>
 
           <Reveal i={2} className="mt-12">
             <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-hairline bg-hairline">
               {[
-                { k: "Home base", v: BRAND.home },
-                { k: "Coordinates", v: BRAND.coordinates },
-                { k: "Coastline", v: "Bulgarian Black Sea" },
-                { k: "Reach", v: "Expanding globally" },
+                { k: "База", v: BRAND.home },
+                { k: "Координати", v: BRAND.coordinates },
+                { k: "Крайбрежие", v: "Българско Черноморие" },
+                { k: "Обхват", v: "С поглед към света" },
               ].map((d) => (
                 <div key={d.k} className="bg-pearl p-6">
                   <div className="data-label text-[0.65rem] uppercase tracking-[0.18em] text-gold">
@@ -257,7 +257,7 @@ function WhereWeWork() {
             <div className="overflow-hidden rounded-2xl">
               <RevealImage
                 src={PHOTOS.beach}
-                alt="The Primorsko beach on the Bulgarian Black Sea coast"
+                alt="Плажът в Приморско на българското Черноморие"
                 className="aspect-[4/5] w-full md:aspect-[3/4]"
               />
             </div>
@@ -265,7 +265,7 @@ function WhereWeWork() {
           <HorizonLine
             className="mt-7"
             tone="faint"
-            left="Primorsko · Black Sea"
+            left="Приморско · Черно море"
             right={BRAND.coordinates}
           />
         </div>
@@ -280,7 +280,7 @@ function Quote() {
   const c = CASES[0];
   return (
     <Reveal className="mt-24 md:mt-32">
-      <HorizonLine left="( In their words )" right={c.quoteBy} />
+      <HorizonLine left="( С техните думи )" right={c.quoteBy} />
       <blockquote className="mt-10 max-w-4xl font-display text-[clamp(1.6rem,3.6vw,2.8rem)] font-light leading-[1.18] text-sea-deep">
         <span className="text-gold">“</span>
         {c.quote}
@@ -293,13 +293,13 @@ function Quote() {
 
 /* -------------------------------------------------------- VALUES + CLOSE */
 const VALUES = [
-  "Hospitality",
-  "Craft",
-  "Reach",
-  "Direct bookings",
-  "Cinematic",
-  "Organic",
-  "Local eyes",
+  "Гостоприемство",
+  "Майсторство",
+  "Обхват",
+  "Директни резервации",
+  "Кинематографично",
+  "Органично",
+  "Местен поглед",
 ];
 
 function ValuesClose() {
@@ -329,18 +329,18 @@ function ValuesClose() {
 
       <div className="relative mx-auto max-w-[1400px] px-6 py-28 text-center md:px-10 md:py-40">
         <Reveal>
-          <span className="eyebrow text-gold">( Let's fill it )</span>
+          <span className="eyebrow text-gold">( Да го напълним )</span>
         </Reveal>
         <h2 className="mx-auto mt-8 max-w-4xl font-display text-[clamp(2.2rem,5.6vw,4.6rem)] font-light leading-[1.0] text-pearl">
-          <MaskText text="If your hotel is worth filming," />{" "}
+          <MaskText text="Ако хотелът ви е достоен да бъде заснет," />{" "}
           <span className="text-gold-foil italic">
-            <MaskText text="let's keep it full." delay={0.12} />
+            <MaskText text="да го държим пълен." delay={0.12} />
           </span>
         </h2>
         <Reveal i={1}>
           <p className="pretty mx-auto mt-8 max-w-xl text-lg leading-relaxed text-pearl/70">
-            We take on a small number of coastal hotels each season. If yours could be one of them,
-            the next step is a conversation.
+            Всеки сезон поемаме малък брой хотели по Черноморието. Ако вашият може да е един от тях,
+            следващата стъпка е разговор.
           </p>
         </Reveal>
 
@@ -353,10 +353,10 @@ function ValuesClose() {
           className="mt-12 flex flex-wrap items-center justify-center gap-4"
         >
           <MagneticButton to="/contact" variant="gold">
-            Book a call
+            Запази разговор
           </MagneticButton>
           <MagneticButton to="/success-cases" variant="light">
-            See the results
+            Виж резултатите
           </MagneticButton>
         </motion.div>
 

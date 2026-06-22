@@ -12,15 +12,15 @@ export function Footer() {
     <footer className="grain relative overflow-hidden bg-sea-deep text-pearl">
       {/* CTA band */}
       <div className="mx-auto max-w-[1400px] px-6 pt-24 md:px-10 md:pt-32">
-        <span className="eyebrow text-gold">( Let's begin )</span>
+        <span className="eyebrow text-gold">( Да започнем )</span>
         <h2 className="mt-7 max-w-4xl font-display text-[3rem] font-light leading-[0.98] text-pearl sm:text-[4.2rem] md:text-[5.4rem]">
-          <MaskText text="Let's fill" />
+          <MaskText text="Да разпродадем" />
           <br />
-          <MaskText text="your hotel." delay={0.12} />
+          <MaskText text="вашето лято." delay={0.12} />
         </h2>
         <div className="mt-10">
           <MagneticButton to="/contact" variant="gold">
-            Book a call
+            Запази разговор
           </MagneticButton>
         </div>
       </div>
@@ -35,12 +35,12 @@ export function Footer() {
               <span className="font-display text-xl tracking-[0.04em] text-pearl">{BRAND.name}</span>
             </span>
             <p className="pretty mt-4 max-w-xs text-sm leading-relaxed text-pearl/55">
-              {BRAND.descriptor}. We help coastal hotels fill their rooms — direct, season after season.
+              {BRAND.descriptor}. Помагаме на хотелите по Черноморието да пълнят стаите си — директно, сезон след сезон.
             </p>
           </div>
 
           <div>
-            <span className="eyebrow text-sea-mist">Pages</span>
+            <span className="eyebrow text-sea-mist">Страници</span>
             <ul className="mt-5 flex flex-col gap-2.5">
               {NAV.map((item) => (
                 <li key={item.to}>
@@ -53,7 +53,7 @@ export function Footer() {
           </div>
 
           <div>
-            <span className="eyebrow text-sea-mist">Contact</span>
+            <span className="eyebrow text-sea-mist">Контакт</span>
             <ul className="mt-5 flex flex-col gap-2.5 text-sm text-pearl/70">
               <li>
                 <a href={`mailto:${BRAND.email}`} className="transition-colors hover:text-gold">
@@ -70,7 +70,7 @@ export function Footer() {
           </div>
 
           <div>
-            <span className="eyebrow text-sea-mist">Studio</span>
+            <span className="eyebrow text-sea-mist">Студио</span>
             <ul className="mt-5 flex flex-col gap-2.5 text-sm text-pearl/70">
               <li className="data-label text-pearl/50">{BRAND.est}</li>
               <li className="data-label text-pearl/50">{BRAND.coordinates}</li>

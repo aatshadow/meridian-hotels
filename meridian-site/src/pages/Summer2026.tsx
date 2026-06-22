@@ -43,7 +43,7 @@ function Hero() {
       <motion.div style={{ y: imgY, scale: imgScale }} className="absolute inset-0">
         <img
           src={PHOTOS.heroAltDay}
-          alt="A summer morning on the Black Sea coast, seen from the hotel balcony"
+          alt="Лятна сутрин на Черноморието, гледана от хотелския балкон"
           className="h-full w-full object-cover"
           loading="lazy"
         />
@@ -65,14 +65,14 @@ function Hero() {
           className="mb-7 flex items-center gap-4"
         >
           <span className="h-px w-10 bg-gold" />
-          <span className="eyebrow text-pearl/80">( The Summer 2026 Programme )</span>
+          <span className="eyebrow text-pearl/80">( Програмата Лято 2026 )</span>
         </motion.div>
 
         <h1 className="max-w-5xl font-display text-[clamp(2.6rem,8vw,7rem)] font-light leading-[0.94] text-pearl [text-shadow:0_2px_40px_rgba(8,31,41,0.45)]">
-          <MaskText text="Make Summer 2026" delay={LOAD + 0.05} />
+          <MaskText text="Превърнете Лято 2026" delay={LOAD + 0.05} />
           <br />
           <span className="text-gold-foil italic">
-            <MaskText text="the one that sells itself." delay={LOAD + 0.18} />
+            <MaskText text="в сезона, който се продава сам." delay={LOAD + 0.18} />
           </span>
         </h1>
 
@@ -82,8 +82,8 @@ function Hero() {
           transition={{ delay: LOAD + 0.5, duration: 0.9, ease: EASE_OUT_EXPO }}
           className="pretty mt-8 max-w-xl text-lg leading-relaxed text-pearl/75"
         >
-          One complete programme — website, films and photography — built over the winter so your rooms
-          are booking out long before the first guest arrives.
+          Една цялостна програма — сайт, видео и фотография — изградена през зимата, така че стаите ви
+          да се пълнят много преди да пристигне първият гост.
         </motion.p>
 
         <motion.div
@@ -93,10 +93,10 @@ function Hero() {
           className="mt-10 flex flex-wrap items-center gap-4"
         >
           <MagneticButton to="/contact" variant="gold">
-            Reserve your season
+            Запазете сезона си
           </MagneticButton>
           <MagneticButton to="/success-cases" variant="light">
-            See the results
+            Виж резултатите
           </MagneticButton>
         </motion.div>
       </motion.div>
@@ -118,7 +118,7 @@ function Hero() {
 
 /* ------------------------------------------------------- SEASON MARQUEE */
 function SeasonMarquee() {
-  const items = ["June", "July", "August", "September", "Booked-out", "Direct bookings", "Black Sea", "Summer 2026"];
+  const items = ["Юни", "Юли", "Август", "Септември", "Разпродадено", "Директни резервации", "Черно море", "Лято 2026"];
   return (
     <section className="border-y border-hairline bg-pearl py-5">
       <Marquee speed={36}>
@@ -136,29 +136,29 @@ function SeasonMarquee() {
 /* -------------------------------------------------------------- STAKES */
 function Stakes() {
   const cells = [
-    { big: <Counter to={10} />, label: "empty room-nights", sub: "on one quiet summer night", tone: "plain" as const },
-    { big: <span>×</span>, label: "the average room rate", sub: "for a night on the coast", tone: "dim" as const },
-    { big: <Counter to={1000} prefix="€" />, label: "gone — that night", sub: "illustrative example, not a price", tone: "gold" as const },
+    { big: <Counter to={10} />, label: "празни нощувки", sub: "в една тиха лятна вечер", tone: "plain" as const },
+    { big: <span>×</span>, label: "средна цена на стая", sub: "за нощувка на брега", tone: "dim" as const },
+    { big: <Counter to={1000} prefix="€" />, label: "изпарени само за една вечер", sub: "примерна сметка, не оферта", tone: "gold" as const },
   ];
 
   return (
     <section className="grain relative overflow-hidden bg-sea-deep py-28 md:py-40">
       <div className="mx-auto max-w-[1400px] px-6 md:px-10">
         <Reveal>
-          <span className="eyebrow text-gold">( The math of an empty room )</span>
+          <span className="eyebrow text-gold">( Математиката на празната стая )</span>
           <h2 className="mt-7 max-w-3xl font-display text-[clamp(2rem,5vw,4rem)] font-light leading-[1.0] text-pearl">
-            <MaskText text="A night unsold" />
+            <MaskText text="Непродадена нощ" />
             <br />
             <span className="text-gold-foil italic">
-              <MaskText text="is gone for good." delay={0.12} />
+              <MaskText text="е изгубена завинаги." delay={0.12} />
             </span>
           </h2>
         </Reveal>
 
         <Reveal i={1} className="mt-10">
           <p className="pretty max-w-xl text-lg leading-relaxed text-pearl/70">
-            Unlike a product on a shelf, a room-night can never be re-sold tomorrow. Every empty bed in
-            July is revenue that simply disappears — quietly, every single night of the season.
+            За разлика от стоката на рафта, една нощувка не може да се продаде на следващия ден. Всяко
+            празно легло през юли е приход, който просто се изпарява — тихо, всяка вечер от сезона.
           </p>
         </Reveal>
 
@@ -182,12 +182,12 @@ function Stakes() {
 
         <Reveal i={3} className="mt-10">
           <p className="pretty max-w-2xl font-display text-xl font-light italic leading-snug text-pearl/80 md:text-2xl">
-            Multiply that across a whole shoulder-season, and the cost of doing nothing dwarfs the cost
-            of getting it right.
+            Умножете го по целия слаб сезон и цената на бездействието далеч надхвърля цената на това да
+            се свърши както трябва.
           </p>
         </Reveal>
 
-        <HorizonLine className="mt-16" tone="sea" left="( Figures shown are illustrative )" right={BRAND.home} />
+        <HorizonLine className="mt-16" tone="sea" left="( Показаните числа са илюстративни )" right={BRAND.home} />
       </div>
     </section>
   );
@@ -205,29 +205,29 @@ type Phase = {
 
 const PHASES: Phase[] = [
   {
-    tag: "Phase 01",
-    window: "Winter · Off-season",
-    title: "Foundations",
+    tag: "Фаза 01",
+    window: "Зима · Извън сезона",
+    title: "Основи",
     blurb:
-      "We shoot the property and build the cinematic website — the booking funnel that sells the stay before a guest ever arrives.",
+      "Заснемаме имота и изграждаме кинематографичния сайт — системата за резервации, която продава престоя още преди гостът да е стъпил при вас.",
     service: SERVICES[0],
     image: PHOTOS.roomFramed,
   },
   {
-    tag: "Phase 02",
-    window: "Spring · Pre-season",
-    title: "Pre-season",
+    tag: "Фаза 02",
+    window: "Пролет · Преди сезона",
+    title: "Преди сезона",
     blurb:
-      "Three short films go live and start travelling — putting your rooms in front of the people already dreaming of the coast, weeks before they book.",
+      "Три кратки видеа излизат и тръгват да обикалят — изправяйки стаите ви пред хората, които вече мечтаят за брега, седмици преди да резервират.",
     service: SERVICES[1],
     image: PHOTOS.terrace,
   },
   {
-    tag: "Phase 03",
-    window: "Summer · Peak",
-    title: "Peak",
+    tag: "Фаза 03",
+    window: "Лято · Пик",
+    title: "Пик",
     blurb:
-      "Photography, site and films work as one funnel through the busiest weeks — turning quiet scrolls into direct bookings, night after night.",
+      "Фотография, сайт и видео работят като едно цяло през най-натоварените седмици — превръщайки разсеяното скролване в директни резервации, вечер след вечер.",
     service: SERVICES[2],
     image: PHOTOS.pool,
   },
@@ -239,23 +239,23 @@ function Programme() {
       <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
         <div>
           <Reveal>
-            <span className="eyebrow text-gold">( What's included )</span>
+            <span className="eyebrow text-gold">( Какво включва )</span>
           </Reveal>
           <h2 className="mt-7 max-w-2xl font-display text-[clamp(2rem,5vw,4rem)] font-light leading-[1.0] text-sea-deep">
-            <MaskText text="One programme," />
+            <MaskText text="Една програма," />
             <br />
-            <MaskText text="three phases." delay={0.1} />
+            <MaskText text="три фази." delay={0.1} />
           </h2>
         </div>
         <Reveal className="max-w-sm">
           <p className="pretty text-ink-soft">
-            The complete pack, rolled out on the season's clock — so every piece is ready exactly when it
-            earns its keep.
+            Целият пакет, разгърнат по ритъма на сезона — така че всяка част е готова точно когато ѝ дойде
+            времето.
           </p>
         </Reveal>
       </div>
 
-      <HorizonLine className="mt-12" left="( The rollout )" right="Foundations → Pre-season → Peak" />
+      <HorizonLine className="mt-12" left="( Разгръщането )" right="Основи → Преди сезона → Пик" />
 
       <div className="mt-14 flex flex-col gap-px overflow-hidden rounded-2xl border border-hairline bg-hairline md:mt-16">
         {PHASES.map((p, i) => (
@@ -273,7 +273,7 @@ function Programme() {
           ))}
           <span className="flex items-center gap-2.5">
             <Check size={15} className="text-gold" strokeWidth={2} />
-            <span className="data-label text-xs uppercase tracking-[0.16em] text-sea-deep">All season, one funnel</span>
+            <span className="data-label text-xs uppercase tracking-[0.16em] text-sea-deep">Цял сезон, една система</span>
           </span>
         </div>
       </Reveal>
@@ -320,16 +320,16 @@ function PhaseRow({ phase, index, reverse }: { phase: Phase; index: number; reve
 function WhyNow() {
   const points = [
     {
-      k: "A few hotels per coast",
-      v: "We take on a limited number of hotels each season, so every property gets the full attention the work demands.",
+      k: "Само няколко хотела на крайбрежие",
+      v: "Всеки сезон поемаме ограничен брой хотели, така че всеки имот получава пълното внимание, което работата изисква.",
     },
     {
-      k: "The work comes first",
-      v: "Filming, building and shooting all happen before the season opens — there is no shortcut once the rooms are already full.",
+      k: "Работата е на първо място",
+      v: "Заснемането, изграждането и снимането стават преди сезонът да отвори — пряк път няма, ако искаме стаите да са вече пълни.",
     },
     {
-      k: "Reach that compounds",
-      v: "Organic reach builds week over week. The earlier the films go live, the further they travel by July.",
+      k: "Обхват, който се натрупва",
+      v: "Органичният обхват расте седмица след седмица. Колкото по-рано излязат видеата, толкова по-далеч ще са стигнали до юли.",
     },
   ];
 
@@ -339,20 +339,20 @@ function WhyNow() {
         <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
           <div>
             <Reveal>
-              <span className="eyebrow text-gold">( Why now )</span>
+              <span className="eyebrow text-gold">( Защо сега )</span>
             </Reveal>
             <h2 className="mt-7 max-w-3xl font-display text-[clamp(2rem,5vw,4rem)] font-light leading-[1.0] text-pearl">
-              <MaskText text="The season is" />
+              <MaskText text="Сезонът се" />
               <br />
               <span className="text-gold-foil italic">
-                <MaskText text="won in winter." delay={0.12} />
+                <MaskText text="печели през зимата." delay={0.12} />
               </span>
             </h2>
           </div>
           <Reveal className="max-w-sm">
             <p className="pretty text-pearl/70">
-              By the time the first guests arrive, the work is already done. To be full in summer, we have
-              to start now.
+              Когато пристигнат първите гости, работата вече е свършена. За да е пълно лятото,
+              трябва да започнем сега.
             </p>
           </Reveal>
         </div>
@@ -367,18 +367,18 @@ function WhyNow() {
           ))}
         </div>
 
-        <HorizonLine className="mt-16" tone="gold" left="( Limited intake )" right="Summer 2026 · Black Sea" />
+        <HorizonLine className="mt-16" tone="gold" left="( Ограничен прием )" right="Лято 2026 · Черно море" />
 
         <Reveal className="mt-10">
           <p className="balance max-w-3xl font-display text-2xl font-light leading-snug text-pearl md:text-3xl">
-            Two small Primorsko hotels. Over ten million organic views. The next coastline opens for a
-            handful of hotels — and the season is filling up.
+            Три хотела по Черноморието. Над десет милиона органични гледания. Следващото крайбрежие
+            отваря за шепа хотели — и сезонът се разпродава.
           </p>
           <Link
             to="/success-cases"
             className="group mt-7 inline-flex items-center gap-2 font-mono text-[0.75rem] uppercase tracking-[0.18em] text-pearl"
           >
-            See how we filled them
+            Виж как ги напълнихме
             <ArrowUpRight size={15} className="text-gold transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </Link>
         </Reveal>
@@ -391,25 +391,25 @@ function WhyNow() {
 function ClosingCTA() {
   return (
     <section className="mx-auto max-w-[1400px] px-6 py-28 md:px-10 md:py-40">
-      <HorizonLine left="( Summer 2026 )" right={BRAND.coordinates} />
+      <HorizonLine left="( Лято 2026 )" right={BRAND.coordinates} />
       <div className="mt-12 flex flex-col items-start justify-between gap-12 md:flex-row md:items-end">
         <Reveal>
           <h2 className="max-w-3xl font-display text-[clamp(2.4rem,6vw,5rem)] font-light leading-[0.98] text-sea-deep">
-            <MaskText text="Reserve your" />
+            <MaskText text="Запазете своето" />
             <br />
             <span className="text-gold-foil italic">
-              <MaskText text="summer." delay={0.1} />
+              <MaskText text="лято." delay={0.1} />
             </span>
           </h2>
         </Reveal>
         <Reveal i={1} className="max-w-sm">
           <p className="pretty text-ink-soft">
-            One short call to see if your hotel is the right fit for the season. The work starts long
-            before June — and so should the conversation.
+            Един кратък разговор, за да видим дали хотелът ви пасва на сезона. Работата започва
+            много преди юни — а разговорът трябва да започне още по-рано.
           </p>
           <div className="mt-8">
             <MagneticButton to="/contact" variant="gold">
-              Book a call
+              Запази разговор
             </MagneticButton>
           </div>
         </Reveal>

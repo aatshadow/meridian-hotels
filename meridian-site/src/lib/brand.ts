@@ -9,44 +9,44 @@ const B = import.meta.env.BASE_URL;
 export const BRAND = {
   name: "MERIDIAN",
   // placeholder wordmark — change `name` above and it updates everywhere
-  descriptor: "Hotel Growth Studio",
-  tagline: "We fill coastal hotels.",
+  descriptor: "Студио за растеж на хотели",
+  tagline: "Пълни стаи, всяко лято.",
   // Primorsko, Bulgaria — the studio's home coordinate (recurring motif)
   coordinates: "42.2667° N · 27.7586° E",
-  home: "Primorsko · Bulgarian Black Sea",
-  est: "EST. 2025",
+  home: "Приморско · Българско Черноморие",
+  est: "ОСН. 2025",
   email: "hello@meridian.studio",
   phoneDisplay: "+359 88 000 0000",
   instagram: "@meridian.studio",
 } as const;
 
 export const NAV = [
-  { label: "Home", to: "/" },
-  { label: "Summer 2026", to: "/summer-2026" },
-  { label: "About", to: "/about" },
-  { label: "Success Cases", to: "/success-cases" },
-  { label: "Contact", to: "/contact" },
+  { label: "Начало", to: "/" },
+  { label: "Лято 2026", to: "/summer-2026" },
+  { label: "За нас", to: "/about" },
+  { label: "Резултати", to: "/success-cases" },
+  { label: "Контакт", to: "/contact" },
 ] as const;
 
 /* What we deliver — the "complete pack" (no prices, by design) */
 export const SERVICES = [
   {
     no: "01",
-    title: "Cinematic Website",
-    line: "A site that sells the stay before they arrive",
-    body: "A fast, beautiful booking funnel built to turn a scroll into a reservation — and a reservation into a direct one, off the OTAs.",
+    title: "Сайт, който продава",
+    line: "Превръща посетителя в резервация — директно при вас",
+    body: "Бърз, красив сайт, на който гостите резервират директно при вас — без посредник между вас и госта.",
   },
   {
     no: "02",
-    title: "Three Reels",
-    line: "Short films that travel further than ads",
-    body: "Organic, scroll-stopping reels that put your rooms in front of the people already dreaming about the coast.",
+    title: "Видеа с хиляди гледания",
+    line: "Показваме хотела ви пред цяла България",
+    body: "Органични видеа, които алгоритъмът разнася до хората, които вече мечтаят за морето — без платена реклама.",
   },
   {
     no: "03",
-    title: "Photography",
-    line: "Light, water, and rooms that look lived-in",
-    body: "A full professional shoot — the images that make the website, the reels and the booking page feel like a place worth paying for.",
+    title: "Снимки, които продават",
+    line: "Кадри, които карат хората да искат да са там",
+    body: "Професионална фотография, която прави хотела ви неустоим — на сайта, в Google и в социалните мрежи.",
   },
 ] as const;
 
