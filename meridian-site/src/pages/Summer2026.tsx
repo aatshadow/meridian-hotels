@@ -82,7 +82,7 @@ function Hero() {
           transition={{ delay: LOAD + 0.5, duration: 0.9, ease: EASE_OUT_EXPO }}
           className="pretty mt-8 max-w-xl text-lg leading-relaxed text-pearl/75"
         >
-          Една цялостна програма — сайт, видео и фотография — изградена през зимата, така че стаите ви
+          Една цялостна програма — сайт, видео и фотография — изградена преди сезона, така че стаите ви
           да се пълнят много преди да пристигне първият гост.
         </motion.p>
 
@@ -345,7 +345,7 @@ function WhyNow() {
               <MaskText text="Сезонът се" />
               <br />
               <span className="text-gold-foil italic">
-                <MaskText text="печели през зимата." delay={0.12} />
+                <MaskText text="печели преди да започне." delay={0.12} />
               </span>
             </h2>
           </div>
