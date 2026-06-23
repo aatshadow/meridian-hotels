@@ -136,9 +136,9 @@ function SeasonMarquee() {
 /* -------------------------------------------------------------- STAKES */
 function Stakes() {
   const cells = [
-    { big: <Counter to={10} />, label: "празни нощувки", sub: "в една тиха лятна вечер", tone: "plain" as const },
-    { big: <span>×</span>, label: "средна цена на стая", sub: "за нощувка на брега", tone: "dim" as const },
-    { big: <Counter to={1000} prefix="€" />, label: "изпарени само за една вечер", sub: "примерна сметка, не оферта", tone: "gold" as const },
+    { big: <Counter to={10} />, label: "празни легла", sub: "в една тиха лятна вечер", tone: "plain" as const },
+    { big: <span>×</span>, label: "вечер след вечер", sub: "през целия сезон", tone: "dim" as const },
+    { big: <Counter to={300} suffix="+" />, label: "пропуснати нощувки", sub: "тихо, преди да усетите", tone: "gold" as const },
   ];
 
   return (
@@ -206,7 +206,7 @@ type Phase = {
 const PHASES: Phase[] = [
   {
     tag: "Фаза 01",
-    window: "Зима · Извън сезона",
+    window: "Преди сезона · Основи",
     title: "Основи",
     blurb:
       "Заснемаме имота и изграждаме кинематографичния сайт — системата за резервации, която продава престоя още преди гостът да е стъпил при вас.",

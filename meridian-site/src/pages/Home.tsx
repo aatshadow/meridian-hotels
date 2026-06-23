@@ -44,7 +44,7 @@ function Hero() {
   return (
     <section ref={ref} className="relative h-[100svh] min-h-[660px] w-full overflow-hidden bg-sea-deep">
       <motion.div style={{ y: imgY, scale: imgScale }} className="absolute inset-0">
-        <img src={PHOTOS.hero} alt="Golden hour over the Black Sea from the hotel terrace" className="h-full w-full object-cover" />
+        <img src={PHOTOS.hero} alt="Златен час над Черно море от терасата на хотела" className="h-full w-full object-cover" />
       </motion.div>
       <div className="vignette absolute inset-0" />
       <div className="grain absolute inset-0" />
@@ -390,7 +390,7 @@ function GalleryStrip() {
       <Marquee speed={55}>
         {row.map((src, i) => (
           <div key={i} className="mx-3 h-[42vw] max-h-[420px] w-[60vw] max-w-[640px] shrink-0 overflow-hidden rounded-xl md:mx-4">
-            <img src={src} alt="" loading="lazy" className="h-full w-full object-cover" />
+            <img src={src} alt="Кадър от хотел Чайка, Приморско" loading="lazy" className="h-full w-full object-cover" />
           </div>
         ))}
       </Marquee>

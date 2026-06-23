@@ -90,7 +90,7 @@ function Hero() {
           className="pretty mt-9 max-w-xl text-lg leading-relaxed text-pearl/70"
         >
           Никакви измислени числа. Това са реалните анализи на нашите хотели — всяко
-          гледане е спечелено органично, без нито един лев за реклама.
+          гледане е спечелено органично, без платена реклама.
         </motion.p>
 
         {/* aggregate headline stats — the big animated row */}
@@ -217,7 +217,7 @@ function CaseStudy({ c, index }: { c: Case; index: number }) {
         {/* THE REAL NUMBERS */}
         <HorizonLine
           className="mt-24 md:mt-28"
-          left={`( ${c.native} · the real numbers )`}
+          left={`( ${c.native} · реалните числа )`}
           right={c.year}
           tone={dark ? "sea" : "gold"}
         />
@@ -297,7 +297,7 @@ function CoverPanel({ c, num, dark }: { c: Case; num: string; dark: boolean }) {
       <motion.div style={{ y: imgY, scale: imgScale }} className="absolute inset-0">
         <img
           src={c.cover}
-          alt={`${c.name} — ${c.kind} in ${c.location}`}
+          alt={`${c.name} — ${c.kind}, ${c.location}`}
           loading="lazy"
           className="h-full w-full object-cover"
         />

@@ -73,8 +73,8 @@ function Hero() {
             transition={{ duration: 0.9, ease: EASE_OUT_EXPO, delay: 0.5 }}
             className="pretty mt-8 max-w-md text-lg leading-relaxed text-pearl/70"
           >
-            Разкажете ни за стаите си и за вашия бряг. До ден ще ви върнем с ясен, честен план как
-            да напълним сезона ви — без презентации, без натиск.
+            Разкажете ни за стаите си и за вашия бряг. До ден ще се върнем при вас с ясен, честен план
+            как да напълним сезона ви — без презентации, без натиск.
           </motion.p>
 
           <motion.div
@@ -186,7 +186,7 @@ function ContactForm() {
               <label htmlFor="email" className={FIELD_LABEL}>
                 Имейл
               </label>
-              <input id="email" name="email" type="email" required placeholder="you@hotel.com" className={FIELD} />
+              <input id="email" name="email" type="email" required placeholder="ime@hotel.bg" className={FIELD} />
             </div>
 
             <div>
@@ -299,7 +299,7 @@ function ContactDetails() {
 const STEPS = [
   { no: "01", title: "Говорим", body: "Спокоен разговор. Разказвате ни за хотела и брега си; ние се вслушваме къде стаите остават празни." },
   { no: "02", title: "Планираме сезона ви", body: "Ясен, честен план — сайт, видео и фотография — изграден около месеците, които най-много трябва да напълните." },
-  { no: "03", title: "Ние творим, вие пълните", body: "Създаваме всичко, а после гледаме как обхватът расте седмица след седмица — директни резервации, без нито лев за реклама." },
+  { no: "03", title: "Ние творим, вие пълните", body: "Създаваме всичко, а после гледаме как обхватът расте седмица след седмица — директни резервации, без платена реклама." },
 ];
 
 function WhatHappensNext() {
