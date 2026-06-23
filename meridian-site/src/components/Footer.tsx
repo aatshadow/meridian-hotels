@@ -61,8 +61,8 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href={`https://instagram.com/${BRAND.instagram.replace("@", "")}`} className="transition-colors hover:text-gold">
-                  {BRAND.instagram}
+                <a href={`tel:${BRAND.phoneDisplay.replace(/\s/g, "")}`} className="transition-colors hover:text-gold">
+                  {BRAND.phoneDisplay}
                 </a>
               </li>
               <li className="text-pearl/50">{BRAND.home}</li>

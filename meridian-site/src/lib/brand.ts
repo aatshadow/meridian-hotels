@@ -16,8 +16,7 @@ export const BRAND = {
   home: "Приморско · Българско Черноморие",
   est: "ОСН. 2025",
   email: "hello@meridian.studio",
-  phoneDisplay: "+359 88 000 0000",
-  instagram: "@meridian.studio",
+  phoneDisplay: "+359 892 601 488",
 } as const;
 
 export const NAV = [

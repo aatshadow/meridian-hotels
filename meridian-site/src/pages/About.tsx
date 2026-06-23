@@ -216,12 +216,12 @@ function WhereWeWork() {
           <Reveal>
             <span className="eyebrow text-gold">( Къде работим )</span>
             <h2 className="mt-7 max-w-xl font-display text-[clamp(2rem,5vw,4rem)] font-light leading-[1.02] text-sea-deep">
-              <MaskText text="Домът е" />{" "}
+              <MaskText text="Домът ни е" />{" "}
               <span className="text-gold-foil italic">
                 <MaskText text="Приморско." delay={0.1} />
               </span>
               <br />
-              <MaskText text="Крайбрежието е заданието." delay={0.18} />
+              <MaskText text="Работим по цялото крайбрежие." delay={0.18} />
             </h2>
           </Reveal>
 

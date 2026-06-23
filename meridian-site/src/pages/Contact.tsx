@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
-import { ArrowUpRight, Check, Mail, Instagram, MapPin, Compass } from "lucide-react";
+import { ArrowUpRight, Check, Mail, Phone, MapPin, Compass } from "lucide-react";
 
 import { PageWrap } from "@/components/PageWrap";
 import { MaskText, Reveal } from "@/components/Reveal";
@@ -231,10 +231,10 @@ function ContactDetails() {
   const rows = [
     { icon: Mail, label: "Имейл", value: BRAND.email, href: `mailto:${BRAND.email}` },
     {
-      icon: Instagram,
-      label: "Instagram",
-      value: BRAND.instagram,
-      href: `https://instagram.com/${BRAND.instagram.replace(/^@/, "")}`,
+      icon: Phone,
+      label: "Телефон",
+      value: BRAND.phoneDisplay,
+      href: `tel:${BRAND.phoneDisplay.replace(/\s/g, "")}`,
     },
     { icon: MapPin, label: "Студио", value: BRAND.home, href: undefined as string | undefined },
     { icon: Compass, label: "Координати", value: BRAND.coordinates, href: undefined as string | undefined },
