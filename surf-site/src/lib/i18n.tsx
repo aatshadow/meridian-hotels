@@ -10,7 +10,7 @@ const LangContext = createContext<Ctx>({ lang: "bg", setLang: () => {}, toggle: 
 export function LangProvider({ children }: { children: ReactNode }) {
   const [lang, setLang] = useState<Lang>(() => {
     if (typeof localStorage !== "undefined") {
-      const s = localStorage.getItem("chaika-lang");
+      const s = localStorage.getItem("surf-lang");
       if (s === "bg" || s === "en") return s;
     }
     return "bg"; // Bulgarian is the primary language
@@ -19,7 +19,7 @@ export function LangProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     document.documentElement.lang = lang;
     try {
-      localStorage.setItem("chaika-lang", lang);
+      localStorage.setItem("surf-lang", lang);
     } catch {
       /* ignore */
     }

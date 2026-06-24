@@ -43,7 +43,7 @@ function Hero() {
   return (
     <section ref={ref} className="relative h-[100svh] min-h-[640px] w-full overflow-hidden bg-navy">
       <motion.div style={{ y: imgY, scale: imgScale }} className="absolute inset-0">
-        <img src={PHOTOS.heroSunset} alt="Залез над морето от терасата на хотел Чайка" className="h-full w-full object-cover" />
+        <img src={PHOTOS.heroSunset} alt="Изглед към плажа и морето, хотел Сърф, Приморско" className="h-full w-full object-cover" />
       </motion.div>
       <div className="vignette absolute inset-0" />
       <div className="grain absolute inset-0" />

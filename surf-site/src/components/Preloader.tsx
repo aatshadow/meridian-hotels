@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Seagull } from "./Logo";
 import { EASE_IN_OUT_QUINT, EASE_OUT_EXPO } from "@/lib/motion";
 
-/* Opening: the gull glides in, ЧАЙКА rises, the horizon draws, then the panel lifts. */
+/* Opening: the gull glides in, SURF rises, the horizon draws, then the panel lifts. */
 export function Preloader({ onComplete }: { onComplete: () => void }) {
   useEffect(() => {
     const t = setTimeout(onComplete, 1850);
@@ -33,7 +33,7 @@ export function Preloader({ onComplete }: { onComplete: () => void }) {
             animate={{ y: "0%" }}
             transition={{ duration: 0.9, ease: EASE_OUT_EXPO, delay: 0.2 }}
           >
-            ЧАЙКА
+            SURF
           </motion.span>
         </span>
 

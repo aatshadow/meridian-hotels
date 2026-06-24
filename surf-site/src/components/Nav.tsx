@@ -49,7 +49,7 @@ export function Nav() {
           }`}
         />
         <nav className="relative mx-auto flex max-w-[1400px] items-center justify-between px-6 py-4 md:px-10">
-          <Link to="/" aria-label="Хотел Чайка — начало">
+          <Link to="/" aria-label="Хотел Сърф — начало">
             <Logo />
           </Link>
 

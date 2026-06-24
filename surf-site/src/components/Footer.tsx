@@ -36,7 +36,7 @@ export function Footer() {
             <span className="inline-flex items-center gap-3">
               <Seagull size={36} className="text-gold" />
               <span className="flex flex-col leading-none">
-                <span className="font-display text-xl font-semibold tracking-[0.14em] text-cream">ЧАЙКА</span>
+                <span className="font-display text-xl font-semibold tracking-[0.14em] text-cream">SURF</span>
                 <span className="data-label mt-1 text-[0.55rem] tracking-[0.42em] text-gold">ПРИМОРСКО</span>
               </span>
             </span>
@@ -103,16 +103,16 @@ export function Footer() {
           transition={{ duration: 1.2 }}
           className="text-center font-display text-[19vw] font-semibold leading-none tracking-[0.06em] text-cream"
         >
-          ЧАЙКА
+          SURF
         </motion.div>
       </div>
 
       <div className="border-t border-cream/10">
         <div className="mx-auto flex max-w-[1400px] flex-col items-center justify-between gap-3 px-6 py-7 md:flex-row md:px-10">
           <span className="data-label text-xs text-cream/40">
-            © {new Date().getFullYear()} ЧАЙКА · {t(HOTEL.town)} — {t(C.ui.rights)}
+            © {new Date().getFullYear()} SURF · {t(HOTEL.town)} — {t(C.ui.rights)}
           </span>
-          <span className="data-label text-xs text-cream/40">Hotel Chaika · Primorsko</span>
+          <span className="data-label text-xs text-cream/40">Hotel Surf · Primorsko</span>
         </div>
       </div>
     </footer>

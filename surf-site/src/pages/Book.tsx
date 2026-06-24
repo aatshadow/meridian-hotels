@@ -189,7 +189,7 @@ function FindUs() {
             <div className="overflow-hidden rounded-2xl border border-line shadow-[0_30px_70px_-45px_rgba(20,58,77,0.4)]">
               <iframe
                 src={HOTEL.mapEmbed}
-                title="Hotel Chaika — Primorsko map"
+                title="Hotel Surf — Primorsko map"
                 className="h-[320px] w-full md:h-[420px]"
                 style={{ border: 0 }}
                 loading="lazy"

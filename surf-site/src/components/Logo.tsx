@@ -32,7 +32,7 @@ export function Logo({ light = false, className = "" }: { light?: boolean; class
           className="font-display text-[1.45rem] font-semibold leading-none tracking-[0.14em]"
           style={{ color: ink }}
         >
-          ЧАЙКА
+          SURF
         </span>
         <span className="data-label mt-1 text-[0.55rem] tracking-[0.42em] text-gold">ПРИМОРСКО</span>
       </span>
@@ -50,7 +50,7 @@ export function LogoStacked({ light = true, className = "" }: { light?: boolean;
         className="mt-3 font-display text-3xl font-semibold leading-none tracking-[0.2em]"
         style={{ color: ink }}
       >
-        ЧАЙКА
+        SURF
       </span>
       <span className="data-label mt-2 text-[0.6rem] tracking-[0.5em] text-gold">ПРИМОРСКО</span>
     </span>

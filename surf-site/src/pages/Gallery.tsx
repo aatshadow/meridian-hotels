@@ -111,8 +111,8 @@ function GalleryGrid() {
                 <img
                   src={src}
                   alt={t({
-                    bg: `Хотел Чайка, Приморско — кадър ${i + 1}`,
-                    en: `Hotel Chaika, Primorsko — frame ${i + 1}`,
+                    bg: `Хотел Сърф, Приморско — кадър ${i + 1}`,
+                    en: `Hotel Surf, Primorsko — frame ${i + 1}`,
                   })}
                   loading="lazy"
                   className="h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105"
