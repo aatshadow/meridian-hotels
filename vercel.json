@@ -8,6 +8,7 @@
     { "source": "/chaika/:path*", "destination": "/chaika/index.html" },
     { "source": "/calypso/:path*", "destination": "/calypso/index.html" },
     { "source": "/oman/:path*", "destination": "/oman/index.html" },
-    { "source": "/surf/:path*", "destination": "/surf/index.html" }
+    { "source": "/surf/:path*", "destination": "/surf/index.html" },
+    { "source": "/primo/:path*", "destination": "/primo/index.html" }
   ]
 }
